@@ -1,13 +1,18 @@
 import tkinter as tk
+from turtle import bgcolor
 window = tk.Tk()
 
-button = tk.Button(text='...', bg="white", fg="black")
+def buttonFunction():
+    if window['bg']=="black":
+        window.config(bg="yellow")
+        button.config(text="Switch light off")   
+        print("light on")
+    else:
+        window.config(bg="black")
+        button.config(text="Switch light on")
+        print("light off")
+
+button = tk.Button(text='click', bg="white", fg="black", command=buttonFunction)
 button.pack(pady = 20, padx = 20)
-
-# schijf hier tussen je code
-
-
-
-# schijf hier tussen je code
 
 window.mainloop()
